@@ -1,0 +1,15 @@
+{
+	name          = 'Open in Browser';
+	input         = 'canonical';
+	keyEquivalent = "^o";
+	select        = "x-github-recipient exists";
+	uuid          = '2DC4E437-9DD1-4B39-AAFD-86A3529252A2';
+	command       =
+
+'#!/bin/bash
+url=`egrep -o "https://github\.com/[^ ]+" | tail -1`
+if [ $url != "" ]; then
+	open "$url"
+fi
+';
+}
